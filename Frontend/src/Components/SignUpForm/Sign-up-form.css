@@ -1,0 +1,76 @@
+.signup-form {
+  max-width: 40%;
+  margin-top: 20%;
+}
+
+
+.signup-form .form-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.signup-form label {
+  display: none;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 400px;
+  max-width: 500px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 40px;
+  /* Add padding to accommodate the icon */
+  background-color: #f1f1f1;
+  margin-top: 5%;
+}
+
+.signup-form .form-group::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.signup-form .form-group .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 2.5%;
+}
+
+.signup-form .form-group .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.signup-form .form-group input[type="text"]~.icon svg {
+  fill: #ccc;
+}
+
+.signup-form .form-group input[type="email"]~.icon svg {
+  fill: #ccc;
+}
+
+.signup-form .form-group input[type="password"]~.icon svg {
+  fill: #ccc;
+}
+
+
+.signup-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10%;
+  margin-left: 75%;
+  background-color: #1077A3;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  /* justify-content: center; */
+}

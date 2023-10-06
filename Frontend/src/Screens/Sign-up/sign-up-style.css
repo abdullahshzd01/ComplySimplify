@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+
+.signup-container{
+    width: 100%;
+}
+
+.signup-left-pane {
+    box-sizing: border-box;
+    /* border-style: dashed; */
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
+}
+
+
+
+
+.signup-logo-img {
+
+    display: block;
+
+    width: 150px;
+    height: auto;
+    border-radius: 10px; 
+    margin-top: 5%; 
+    margin-left: 10%; 
+}
+
+
+
+/* #circle {
+    position: absolute;
+    opacity: 0.1;
+    height: 67px;
+    width: 67px;
+    left: 20%;
+    top: 70%;
+    border-radius: 0px;
+}
+
+.triangle{
+    top: 70%;
+    left: 50%;
+    left: 50%;
+    opacity: 0.2;
+}
+
+.triangle canvas {
+    top: 70%;
+    left: 50%;
+    left: 50%;
+    transform: rotate(150deg);
+}
+ */
+
+.signup-left-pane .text{
+    margin-top: 20%;
+    width: 100%;
+}
+
+.signup-left-pane .text .h1{ /* Welcom Back */
+    margin: 5%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.signup-left-pane .text .h4{
+    position: relative;
+    margin: 5%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+.signup-my-button {
+
+    margin-top: 15%;
+    font-family: 'Raleway';
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 35px;
+    text-align: center;
+
+    width: 25%;
+    height: auto;
+    background: transparent;
+    border-radius: 20px 20px 20px 20px;
+    border-color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+
+
+
+
+.signup-right-pane {
+    box-sizing: border-box;
+    /* border-style: dashed; */
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    margin-left: 30%;
+    background: #ffffff;
+}
+ 
+
+
+
+.signup-right-pane .text{
+
+    margin-top: 5%;
+    width: 100%;
+}
+
+.signup-right-pane .text .h1{
+
+    /* border-style: dashed; */
+    font-family: 'Raleway';
+    font-style: normal;
+    /* font-family: 'Raleway', sans-serif; */
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    color: #1077A3;
+}
+
+
+.signup-right-pane .signUpOptions{
+    /* border-style: double; */
+    width: 100%;
+    display:inline-flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.signup-right-pane .form{
+    /* border-style: double; */
+    width: 100%;
+    display:inline-flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.signup-right-pane .signUpOptions .option{
+    
+    margin: 10px;
+    background-color: #ffffff;
+    
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+
+
+.signup-right-pane .signUpOptions .option .h2{
+    margin: 5%;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .signup-container{
+        width: 100px;
+    }
+
+    .signup-left-pane{
+        flex: 40%;
+        flex-direction: row;
+    }
+
+    .signup-right-pane {
+        flex: 60%;
+        flex-direction: row;
+    }
+
+    .signup-left-pane h1{ /* Welcom Back */
+        font-weight: 650;
+        font-size: 20px;
+        line-height: 50px;
+    }
+}
+  

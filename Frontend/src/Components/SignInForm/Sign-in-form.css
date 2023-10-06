@@ -1,0 +1,76 @@
+.signin-form {
+  max-width: 40%;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+
+.signin-form .form-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.signin-form label {
+  display: none;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="email"],
+.signin-form input[type="password"] {
+  width: 400px;
+  max-width: 500px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 40px;
+  background-color: #f1f1f1;
+  margin-top: 5%;
+}
+
+.signin-form .form-group::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.signin-form .form-group .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 2.5%;  
+
+}
+
+.signin-form .form-group .icon svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 5%;
+}
+
+.signin-form .form-group input[type="text"]~.icon svg {
+  fill: #ccc;
+}
+
+.signin-form .form-group input[type="email"]~.icon svg {
+  fill: #ccc;
+}
+
+.signin-form .form-group input[type="password"]~.icon svg {
+  fill: #ccc;
+}
+
+
+.signin-form button[type="submit"] {
+  width: 30%;
+  padding: 10px;
+  margin-top: 5%;
+  background-color: #1077A3;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}

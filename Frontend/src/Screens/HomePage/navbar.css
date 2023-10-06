@@ -1,0 +1,38 @@
+/* CSS for the Navbar */
+.navbar {
+  background-color: transparent; /* Set the background to transparent */
+  position: fixed;
+  top: 2%; 
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 0 85%;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  /* margin: 5%; */
+  margin-left: 20px;
+  color: #fff; /* Set the color for the links */
+  text-decoration: none;
+  
+}
+
+.nav-links a:hover{
+  text-decoration: underline;
+  border-radius: 5px;
+  /* background-image: linear-gradient(90deg, #FF6B6B, #556270); */
+  filter:contrast(2px);
+}
