@@ -9,7 +9,7 @@ const BarChart = () => {
   }, []);
 
   const asyncFetch = () => {
-    if (data1===[{}]){
+    if (data1===null){
       data1=[{"type":"none","value":0}]
       setData(data1)
     }
