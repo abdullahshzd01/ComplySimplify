@@ -63,11 +63,11 @@
     color: hsl(0, 0%, 100%);
 }
 
-.dashboard-left-pane .ButtonContainer {
+/* .dashboard-left-pane .ButtonContainer {
     margin-top: 50%;
-}
+} */
 
-.dashboard-left-pane .ButtonContainer .logout-button {
+/* .dashboard-left-pane .ButtonContainer .logout-button {
     font-family: 'Raleway', sans-serif;
     background: none;
     border: none;
@@ -84,7 +84,7 @@
     border-style: solid;
     border-color: transparent;
     transition: border-color 0.3s;
-}
+} */
 
 .dashboard-left-pane .ButtonContainer :hover {
     color: #ff0000;

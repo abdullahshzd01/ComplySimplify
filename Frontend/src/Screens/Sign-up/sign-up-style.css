@@ -16,9 +16,6 @@
     background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
 }
 
-
-
-
 .signup-logo-img {
 
     display: block;
@@ -27,7 +24,8 @@
     height: auto;
     border-radius: 10px; 
     margin-top: 5%; 
-    margin-left: 10%; 
+    margin-left: 10%;
+    cursor: pointer;
 }
 
 
@@ -87,7 +85,6 @@
 
 
 .signup-my-button {
-
     margin-top: 15%;
     font-family: 'Raleway';
     font-weight: 600;
@@ -101,11 +98,13 @@
     border-radius: 20px 20px 20px 20px;
     border-color: #FFFFFF;
     cursor: pointer;
-  }
-  
+}
 
-
-
+.signup-my-button:hover {
+    background-color: #FFFFFF;
+    color: #03202D;
+    border-color: #03202D;
+}
 
 .signup-right-pane {
     box-sizing: border-box;
@@ -116,12 +115,8 @@
     margin-left: 30%;
     background: #ffffff;
 }
- 
-
-
 
 .signup-right-pane .text{
-
     margin-top: 5%;
     width: 100%;
 }
@@ -175,8 +170,50 @@
     margin: 5%;
 }
 
+.signup-right-pane .signUpOptions .facebook {
+    background-color: #FFFFFF;
+    color: #1877F2;
+}
 
+.signup-right-pane .signUpOptions .facebook:hover {
+    background-color: #1877F2;
+    color: #FFFFFF;
+}
 
+.signup-right-pane .signUpOptions .google {
+    /* background-color: #FFFFFF; */
+    /* color: #DB4437; */
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.signup-right-pane .signUpOptions .google:hover {
+    background-color: #DB4437;
+    color: #DB4437;
+    /* background-color: #ccc; */
+}
+
+.signup-right-pane .signUpOptions .linkedin {
+    background-color: #FFFFFF;
+    color: #0072B1;
+}
+
+.signup-right-pane .signUpOptions .linkedin:hover {
+    background-color: #0072B1;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1380px) {
+    .signup-right-pane .signUpOptions {
+        margin: -25px;
+    }
+
+    .signup-right-pane .form {
+        margin: -15px;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .signup-container{
@@ -199,4 +236,30 @@
         line-height: 50px;
     }
 }
-  
+
+
+
+/* OAuth and email signup divide line */
+/* .divider {
+    display: 'flex';
+    flex-direction: 'row';
+    align-items: 'center';
+}
+
+.divider .dividerLeft {
+    flex: 1;
+    height: '3px';
+    background-color: #ccc;
+}
+
+.divider .dividerText {
+    width: '70px';
+    text-align: 'center';
+    color: #AFAFAF;
+}
+
+.divider .dividerRight {
+    flex: 1;
+    height: '1px';
+    background-color: #ccc;
+} */

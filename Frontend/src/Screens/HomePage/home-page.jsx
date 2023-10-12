@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./home-page-style.css";
 import Logo from "../../assets/Logo.png";
 import Typed from "react-typed";
