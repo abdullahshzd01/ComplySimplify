@@ -10,6 +10,7 @@ import EvidenceTasks from './Screens/Internal-Working/EvidenceTasks/EvidenceTask
 import People from './Screens/Internal-Working/People/people';
 import Policy from './Screens/Internal-Working/Policy/policy';
 import Settings from './Screens/Internal-Working/Settings/settings';
+import Standard from './Screens/Internal-Working/Standard/standard';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
           <Route path = "/dashboard" exact element = {<Dashboard/>}/>
           <Route path = "/Standards" exact element = {<Standards/>}/>
+          <Route path = "/Standard" exact element = {<Standard/>}/>
           <Route path = "/EvidenceTasks" exact element = {<EvidenceTasks/>}/>
           <Route path = "/People" exact element = {<People/>}/>
           <Route path = "/Policy" exact element = {<Policy/>}/>
