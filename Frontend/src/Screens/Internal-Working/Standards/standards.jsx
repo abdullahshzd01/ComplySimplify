@@ -1,5 +1,5 @@
-import React from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../../assets/Logo.png";
 import "./standards-style.css";
 import Navigation_Entities from "../../../Components/Navigation/Navigation_Entities";
@@ -8,19 +8,45 @@ import Navigation_Entities from "../../../Components/Navigation/Navigation_Entit
 
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { storage } from "../../../config/firebase";
+import { ref, uploadBytes } from "firebase/storage";
 
 function Standards() {
+    const [fileUpload, setFileUpload] = useState(null);
     const percentage = 66;
+
+    const UploadPolicy = () => {
+        console.log("Upload Policy Button clicked!");
+
+        if (fileUpload == null) {
+            alert("No File uploaded!");
+            return;
+        }
+        alert(`File attached! => ${fileUpload.name}`);
+        const fileRef = ref(storage, `Policy/${fileUpload.name}`);
+        uploadBytes(fileRef, fileUpload)
+            .then(() => {
+                alert(`File uploaded! => ${fileUpload.name}`);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert("File upload - Failed!\n");
+
+                console.log("Error code: ", errorCode);
+                console.log("Error message: ", errorMessage);
+            });
+    }
 
     // const To_dashboard = useNavigate();
     // const navigateTo_dashboard = () => {
     //     To_dashboard("/dashboard");
     // };
 
-    // const To_standards = useNavigate();
-    // const navigateTo_standards = () => {
-    //     To_standards("/standards");
-    // };
+    const To_standard = useNavigate();
+    const navigateTo_standard = () => {
+        To_standard("/Standard");
+    };
 
     // const To_EvidenceTasks = useNavigate();
     // const navigateTo_EvidenceTasks = () => {
@@ -65,7 +91,28 @@ function Standards() {
 
                 <div className="container">
                     <div className="row">
-                        <div className="box">
+                        <form className="boxUpload policyUploadForm">
+                            {/* <label for="file">Choose a file */}
+                            <input
+                                content=""
+                                placeholder="Upload policy"
+                                name="file"
+                                id="file"
+                                type="file"
+                                className="fileUploader"
+                                onChange={(e) => {
+                                    setFileUpload(e.target.files[0])
+                                }}
+                            />
+                            {/* </label> */}
+                            <button className="ButtonPolicyUpload" type="submit" onClick={UploadPolicy}>Upload</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div className="container">
+                    <div className="row">
+                        <div className="box" onClick={navigateTo_standard}>
                             <div className="HeadingStandard">SOC 2</div>
                             <div className="Caption">Reading Project Status</div>
                             <div className="SidebySideProgressBar">
@@ -86,7 +133,7 @@ function Standards() {
                             </div>
                         </div>
 
-                        <div className="box">
+                        <div className="box" onClick={navigateTo_standard}>
                             <div className="HeadingStandard">ISO 27001</div>
                             <div className="Caption">Reading Project Status</div>
                             <div className="SidebySideProgressBar">

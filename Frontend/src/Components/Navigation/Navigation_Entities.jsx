@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navigation_Entities-style.css"; // Import the CSS file
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 
 function Navigation_Entities() {
     const auth = getAuth();
+    // const [auth, setAuth] = useState(null);
 
     console.log("App => auth: ", auth);
     console.log("App => auth.lastNotifiedUid: ", auth.lastNotifiedUid);
@@ -57,6 +58,18 @@ function Navigation_Entities() {
             console.log("error -> ", error);
         });
     };
+
+    // onAuthStateChanged(auth, (user) => {
+    //     if (user) {
+    //         // User is signed in, see docs for a list of available properties
+    //         // https://firebase.google.com/docs/reference/js/firebase.User
+    //         const uid = user.uid;
+    //         // ...
+    //     } else {
+    //         // User is signed out
+    //         // ...
+    //     }
+    // });
 
     useEffect(() => {
         // Check conditions
