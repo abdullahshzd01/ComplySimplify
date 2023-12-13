@@ -1,0 +1,57 @@
+.Navigation_Entities {
+  margin: 10%;
+  margin-right: 20%;
+}
+
+.Navigation_Entities .text {
+  margin-top: 15%;
+  width: 100%;
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  border-color: transparent;
+  transition: border-color 0.3s; /* Add transition for smooth effect */
+}
+
+.Navigation_Entities:hover .text {
+  border-color: white; /* Change border color on hover */
+}
+
+.Navigation_Entities .text .h4 {
+  position: relative;
+  margin-left: 5%;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+}
+
+.Navigation_Entities .text .ButtonContainer {
+  margin-top: 25%;
+}
+
+.Navigation_Entities .text .ButtonContainer .logout-button {
+  font-family: 'Raleway', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 5%;
+
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  border-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.Navigation_Entities .text .ButtonContainer :hover {
+  color: #ff0000;
+  /* border-color: white; */
+}
