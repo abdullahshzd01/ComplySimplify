@@ -1,0 +1,93 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+ */
+
+.homePage-container {
+    /* box-sizing: border-box; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
+    /* background-image: url(../../assets/background.jpg); */
+
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.homePage-logo-img {
+    display: block;
+    width: 9.5%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.4%;
+    margin-left: 3%;
+}
+
+.homePage-container .background {
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    display: flex;
+    margin: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.homePage-container .background .left-pane {
+    flex: 60%;
+}
+
+.homePage-container .background .animated-typing{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* color: #22344b; */
+    color: rgb(19, 195, 230);
+    font-size: 1.8cm;
+    font-weight: 600;
+    font-variant-caps: all-petite-caps;
+    /* background-color: #669bb9; */
+    /* border-radius: 25px; */
+    /* height: 400px; */
+}
+
+
+.homePage-container .background .animated-typing::before{
+    color: aliceblue;
+    content: "We are ";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.homePage-container .background .right-pane {
+
+    /* border-style: dashed; */
+
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* background-image: url("../../assets/Cybernetic Human@1-1536x746.jpg"); */
+    /* scale: 100px; */
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2cm;
+    flex: 40%;
+    /* margin-left: 30%; */
+    /* width: 800px; */
+    /* height:1000px; */
+    /* background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%); */
+    /* background-image: url(../../assets/background.jpg); */
+
+    /* background-size: cover; */
+    /* background-repeat:no-repeat; */
+    /* background-position: center; */
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .homePage-container {
+        width: 100%;
+    }
+}
