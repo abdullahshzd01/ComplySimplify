@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../../../assets/Logo.png";
 // import tempImg from "../EvidenceTasks/temp.png";
 import "./EvidenceTasks-style.css";
-import Navigation_Entities from "../../../Components/Navigation/Navigation_Entities";
+import NavigationEntities from "../../../Components/Navigation/Navigation_Entities";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import Table from "../../../Components/Tables/Table";
@@ -87,7 +87,7 @@ function EvidenceTasks() {
                     <img className="EvidenceTasks-logo-img" src={Logo} alt="Logo" />
                 </div>
 
-                <Navigation_Entities />
+                <NavigationEntities />
             </div>
 
             <div className="EvidenceTasks-right-pane">

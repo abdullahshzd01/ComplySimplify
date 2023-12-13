@@ -2,11 +2,13 @@ import React from "react";
 // import { useNavigate } from "react-router-dom";
 import Logo from "../../../assets/Logo.png";
 import "./dashboard-style.css";
-import BarChart from "../../../Components/Chart/BarChart";
-import tempImg from "./Pie Chart.png";
+import BarChart from "../../../Components/Chart/BarChart/BarChart";
+import PieChart from "../../../Components/Chart/PieChart/piechart";
+// import tempImg from "./Pie Chart.png";
 // import { getAuth } from "firebase/auth";
 
-import Navigation_Entities from "../../../Components/Navigation/Navigation_Entities";
+import NavigationEntities from "../../../Components/Navigation/Navigation_Entities";
+import LineChart from "../../../Components/Chart/LineChart/linechart";
 
 function Dashboard() {
     // const auth = getAuth();
@@ -80,20 +82,28 @@ function Dashboard() {
                     <img className="dashboard-logo-img" src={Logo} alt="Logo" />
                 </div>
 
-                <Navigation_Entities />
+                <NavigationEntities />
             </div>
 
             <div className="dashboard-right-pane">
                 <div className="text">
                     <h1 className="h1">Dashboard</h1>
                 </div>
+                
+
+                {/* <div className="MainContainer">
+                    <div className="LineChart">
+                        <LineChart />
+                    </div>
+
+                </div> */}
 
                 <div className="MainContainer">
                     <div className="BarChart">
                         <BarChart />
                     </div>
-                    <div>
-                        <img className="TempImg" src={tempImg} alt="Temp" />
+                    <div className="contTest">
+                        <LineChart />
                     </div>
 
                 </div>

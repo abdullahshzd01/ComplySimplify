@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 .standards-container {
     width: 100%;
 }
 
 .standards-logo-img {
-
     display: block;
 
     width: 150px;
@@ -27,9 +25,12 @@
     position: absolute;
     width: 20%;
     height: 100%;
-    background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
+    background: radial-gradient(
+        113.94% 113.94% at 50.06% -13.94%,
+        #1077a3 17.04%,
+        #00090e 100%
+    );
 }
-
 
 .standards-left-pane .Navigation_Entities {
     margin: 10%;
@@ -55,7 +56,7 @@
 .standards-left-pane .Navigation_Entities .text .h4 {
     position: relative;
     margin-left: 5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -69,7 +70,7 @@
 }
 
 .standards-left-pane .ButtonContainer .logout-button {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     background: none;
     border: none;
     cursor: pointer;
@@ -92,11 +93,6 @@
     border-color: white;
 }
 
-
-
-
-
-
 .standards-right-pane {
     /* border-style: dashed;
     border-color: crimson; */
@@ -114,20 +110,29 @@
     text-align: left;
 }
 
-
 .standards-right-pane .text h1 {
     margin-left: 2%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+    /* background-color: #f44336; */
 }
 
 .standards-right-pane .container .col-sm-4 {
     padding: 20px;
 }
 
-
 .standards-right-pane .container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.standards-right-pane .container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* align-content: center; */
+    /* background-color: #ccc;  */
 }
 
 .standards-right-pane .container .row {
@@ -147,7 +152,6 @@
     width: 50%;
 }
 
-
 .standards-right-pane .container .row .boxUpload {
     flex: 1 0 calc(50% - 10px);
     /* Adjusted width with padding */
@@ -159,12 +163,10 @@
     width: 50%;
 }
 
-
-
-.standards-right-pane .container .row .box .HeadingStandard{
+.standards-right-pane .container .row .box .HeadingStandard {
     /* position: relative; */
     /* margin-left: 5%; */
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -173,9 +175,8 @@
     color: hsl(0, 0%, 0%);
 }
 
-
-.standards-right-pane .container .row .box .Caption{
-    font-family: 'Raleway', sans-serif;
+.standards-right-pane .container .row .box .Caption {
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -184,7 +185,7 @@
     color: hsl(0, 3%, 53%);
 }
 
-.standards-right-pane .container .row .box .SidebySideProgressBar{
+.standards-right-pane .container .row .box .SidebySideProgressBar {
     padding-top: 10%;
     padding-left: 15%;
     margin-top: 20px;
@@ -192,14 +193,12 @@
     flex-wrap: wrap;
 }
 
-.standards-right-pane .container .row .box .ProgessBar{
+.standards-right-pane .container .row .box .ProgessBar {
     /* margin-top: 10%; */
     width: 50px;
     height: 50px;
     margin-right: 30%;
 }
-  
-
 
 @media screen and (max-width: 500px) {
     .standards-container {
@@ -233,7 +232,7 @@
 }
 
 .fileUploader::before {
-    content: 'Upload Policy';
+    content: "Upload Policy";
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -255,24 +254,33 @@
     outline: 0;
 }
 .fileUploader:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-.ButtonPolicyUpload {
-    font-family: 'Raleway';
+.ButtonPolicyUploadPopUp {
+    font-family: "Raleway";
     font-weight: 600;
-    color: #00090E;
-    line-height: 35px;
+    color: #00090e;
+    /* line-height: 35px; */
     text-align: center;
-    width: 25%;
+    width: 15%;
+    /* font-size: 50px; */
+    height: 30px;
     background: transparent;
     border-radius: 20px;
-    border-color: #FFFFFF;
+    border-color: #ffffff;
+    margin-right: 2%;
+    cursor: pointer;
+    display: inline-block;
 }
 
-.ButtonPolicyUpload:hover {
-    color: #FFFFFF;
-    background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
+.ButtonPolicyUploadPopUp:hover {
+    color: #ffffff;
+    background: radial-gradient(
+        113.94% 113.94% at 50.06% -13.94%,
+        #1077a3 17.04%,
+        #00090e 100%
+    );
     cursor: pointer;
     transition: all 0.2s ease;
 }

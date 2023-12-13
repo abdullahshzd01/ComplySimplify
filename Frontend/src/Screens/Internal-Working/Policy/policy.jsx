@@ -2,7 +2,7 @@ import React from "react";
 // import { useNavigate } from "react-router-dom";
 import Logo from "../../../assets/Logo.png";
 import "./policy-style.css";
-import Navigation_Entities from "../../../Components/Navigation/Navigation_Entities";
+import NavigationEntities from "../../../Components/Navigation/Navigation_Entities";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -58,7 +58,7 @@ function Policy() {
                     <img className="Policy-logo-img" src={Logo} alt="Logo" />
                 </div>
 
-                <Navigation_Entities />
+                <NavigationEntities />
             </div>
 
             <div className="Policy-right-pane">

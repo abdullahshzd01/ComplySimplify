@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 
-function Navigation_Entities() {
+function NavigationEntities() {
     const auth = getAuth();
     // const [auth, setAuth] = useState(null);
 
@@ -71,20 +71,20 @@ function Navigation_Entities() {
     //     }
     // });
 
-    useEffect(() => {
-        // Check conditions
-        if (!auth.lastNotifiedUid) {
-            // Execute code if the condition is true
-            console.log('No user logged in');
-            NavigateToSignIn();
-            alert("Login to continue");
-            return;
-        }
+    // useEffect(() => {
+    //     // Check conditions
+    //     if (!auth.lastNotifiedUid) {
+    //         // Execute code if the condition is true
+    //         console.log('No user logged in');
+    //         NavigateToSignIn();
+    //         alert("Login to continue");
+    //         return;
+    //     }
 
-        return () => {
-            // Cleanup code
-        };
-    }, []);
+    //     return () => {
+    //         // Cleanup code
+    //     };
+    // }, []);
 
     return (
         <div className="Navigation_Entities">
@@ -135,4 +135,4 @@ function Navigation_Entities() {
     );
 }
 
-export default Navigation_Entities;
+export default NavigationEntities;
