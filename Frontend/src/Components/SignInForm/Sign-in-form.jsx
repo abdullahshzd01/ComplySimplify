@@ -33,7 +33,7 @@ function SignInForm() {
         return () => {
             // Cleanup code
         };
-    }, []);
+    }, [auth.lastNotifiedUid, navigateToDashboard]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

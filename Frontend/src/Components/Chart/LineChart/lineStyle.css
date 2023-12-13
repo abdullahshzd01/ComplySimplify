@@ -1,0 +1,9 @@
+.chart-container {
+    margin-left: 30dvw;
+    width: 400px;
+    height: max-content;
+    background: linear-gradient(to bottom, #1077A3, #00090E);
+    padding: 2%;
+    border-radius: 10px 40px;
+}
+  
