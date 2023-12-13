@@ -1,0 +1,110 @@
+/* my css here */
+
+.people-heading {
+    font-weight: bold;
+}
+
+.people-list-pane {
+    display: flex;
+    justify-content: center;
+}
+
+.people-list {
+    border-style: dotted;
+
+    background-color: #D9D9D9;
+    width: 95%;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.person-info {
+    /* background-color: #ca2727; */
+    background-color: #FFFFFF;
+    height: 80px;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.person-info-active {
+    background-color: #1077A2;
+}
+
+.person-image-pane {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.person-image {
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    padding: 8px;
+    /* border: 1px solid black; */
+}
+
+.person-nameInfo {
+    width: 25%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name  {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.person-role {
+    color: #9A9A9A;
+}
+
+.person-projectCountInfo {
+    width: 20%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-count {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.project-countInfo {
+    color: #9A9A9A;
+}
+
+.person-finishedProjectCountInfo {
+    width: 20%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.finished-project-count {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.finished-projectCountInfo {
+    color: #9A9A9A;
+    font-size: 15px;
+}
+
+.active-person-info {
+    background-color: #1077A2;
+}
+
+/* end my css */

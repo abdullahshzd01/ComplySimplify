@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Abdullah Shahzad",
+      "role": "Super Admin",
+      "imageSrc": "user.png",
+      "projectCount": 578,
+      "finishedProjectCount": 69,
+      "status":"active"
+    },
+
+    {
+      "name": "Usman Baig",
+      "role": "Admin",
+      "imageSrc": "user.png",
+      "projectCount": 300,
+      "finishedProjectCount": 152,
+      "status":"not active"
+    },
+
+    {
+      "name": "Sahil Parkash",
+      "role": "Admin",
+      "imageSrc": "./user.png",
+      "projectCount": 400,
+      "finishedProjectCount": 380,
+      "status":"not active"
+    },
+
+    {
+      "name": "Jane Doe",
+      "role": "Admin",
+      "imageSrc": "./user.png",
+      "projectCount": 247,
+      "finishedProjectCount": 31,
+      "status":"not active"
+    }
+]
+  

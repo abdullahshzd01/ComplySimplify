@@ -1,0 +1,9 @@
+[
+  { "type": "Sun", "value": 10 },
+  { "type": "Mon", "value": 60 },
+  { "type": "Tue", "value": 50 },
+  { "type": "Wed", "value": 80 },
+  { "type": "Thu", "value": 40 },
+  { "type": "Fri", "value": 30 },
+  { "type": "Sat", "value": 77 }
+]
