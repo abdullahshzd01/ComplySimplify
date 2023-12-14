@@ -6,66 +6,7 @@ const UploadPolicyPopup = ({ onClose }) => {
     const [dropdown2, setDropdown2] = useState("");
     const [file, setFile] = useState(null);
 
-    // const [files, setFiles] = useState([]);
-    // const [uploadProgress, setUploadProgress] = useState(0);
-    // const dropZoneRef = useRef(null);
-    // const fileInputRef = useRef(null);
-    // const progressBarContainerRef = useRef(null);
-
-    // const handleDragOver = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.add("drag-over");
-    //     }
-    // };
-
-    // const handleDragLeave = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.remove("drag-over");
-    //     }
-    // };
-
-    // const handleDrop = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.remove("drag-over");
-    //     }
-
-    //     const newFiles = Array.from(e.dataTransfer.files);
-    //     setFiles(newFiles);
-    //     fileInputRef.current.files = e.dataTransfer.files;
-    // };
-
-    // const handleFileChange = () => {
-    //     const newFiles = Array.from(fileInputRef.current.files);
-    //     setFiles(newFiles);
-    // };
-
-    // const simulateFileUpload = (files) => {
-    //     let totalSize = files.reduce((total, file) => total + file.size, 0);
-    //     let loadedSize = 0;
-
-    //     if (progressBarContainerRef.current) {
-    //         progressBarContainerRef.current.style.visibility = "visible";
-    //     }
-
-    //     const progressInterval = setInterval(() => {
-    //         loadedSize += totalSize / 20;
-    //         let percentLoaded = (loadedSize / totalSize) * 100;
-    //         setUploadProgress(percentLoaded);
-    //         if (loadedSize >= totalSize) {
-    //             clearInterval(progressInterval);
-    //             setTimeout(() => {
-    //                 if (progressBarContainerRef.current) {
-    //                     progressBarContainerRef.current.style.visibility =
-    //                         "hidden";
-    //                 }
-    //                 setUploadProgress(0);
-    //             }, 1000);
-    //         }
-    //     }, 100);
-    // };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -184,29 +125,6 @@ const UploadPolicyPopup = ({ onClose }) => {
 
     return (
         <div className="popup" onClick={onClose}>
-            {/* <form onClick={(e) => e.stopPropagation()} onSubmit={handleSubmit}>
-                <h2>Upload Files</h2>
-                <select
-                    value={dropdown1}
-                    onChange={(e) => setDropdown1(e.target.value)}
-                >
-                </select>
-                <select
-                    value={dropdown2}
-                    onChange={(e) => setDropdown2(e.target.value)}
-                >
-                </select>
-                <input
-                    type="file"
-                    content=""
-                    placeholder="Upload policy"
-                    name="file"
-                    id="file"
-                    className="fileUploader"
-                    onChange={(e) => setFile(e.target.files[0])}
-                />
-                <button type="submit">Submit</button>
-            </form> */}
             <div className="upload-card" onClick={(e) => e.stopPropagation()}>
                 <div className="upload-header">
                     <h1>Upload Policy</h1>
