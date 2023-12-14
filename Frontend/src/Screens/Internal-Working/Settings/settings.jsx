@@ -87,8 +87,11 @@ function Settings() {
                     <h1 className="h1">Settings</h1>
                 </div>
 
-                <div className="text">
-                    <h1 className="h2">Under Development...</h1>
+                <div className="cont">
+                    <form className="centered-form">
+                        <input type="email" required />
+                        <button type="submit">Invite</button>
+                    </form>
                 </div>
             </div>
         </div>

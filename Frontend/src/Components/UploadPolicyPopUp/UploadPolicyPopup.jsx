@@ -6,74 +6,15 @@ const UploadPolicyPopup = ({ onClose }) => {
     const [dropdown2, setDropdown2] = useState("");
     const [file, setFile] = useState(null);
 
-    // const [files, setFiles] = useState([]);
-    // const [uploadProgress, setUploadProgress] = useState(0);
-    // const dropZoneRef = useRef(null);
-    // const fileInputRef = useRef(null);
-    // const progressBarContainerRef = useRef(null);
-
-    // const handleDragOver = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.add("drag-over");
-    //     }
-    // };
-
-    // const handleDragLeave = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.remove("drag-over");
-    //     }
-    // };
-
-    // const handleDrop = (e) => {
-    //     e.preventDefault();
-    //     if (dropZoneRef.current) {
-    //         dropZoneRef.current.classList.remove("drag-over");
-    //     }
-
-    //     const newFiles = Array.from(e.dataTransfer.files);
-    //     setFiles(newFiles);
-    //     fileInputRef.current.files = e.dataTransfer.files;
-    // };
-
-    // const handleFileChange = () => {
-    //     const newFiles = Array.from(fileInputRef.current.files);
-    //     setFiles(newFiles);
-    // };
-
-    // const simulateFileUpload = (files) => {
-    //     let totalSize = files.reduce((total, file) => total + file.size, 0);
-    //     let loadedSize = 0;
-
-    //     if (progressBarContainerRef.current) {
-    //         progressBarContainerRef.current.style.visibility = "visible";
-    //     }
-
-    //     const progressInterval = setInterval(() => {
-    //         loadedSize += totalSize / 20;
-    //         let percentLoaded = (loadedSize / totalSize) * 100;
-    //         setUploadProgress(percentLoaded);
-    //         if (loadedSize >= totalSize) {
-    //             clearInterval(progressInterval);
-    //             setTimeout(() => {
-    //                 if (progressBarContainerRef.current) {
-    //                     progressBarContainerRef.current.style.visibility =
-    //                         "hidden";
-    //                 }
-    //                 setUploadProgress(0);
-    //             }, 1000);
-    //         }
-    //     }, 100);
-    // };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log(dropdown1, dropdown2, file);
 
         const formData = new FormData();
-        formData.append("policytype", dropdown1);
-        formData.append("policycategory", dropdown2);
+        formData.append("policyType", dropdown1);
+        formData.append("policyCategory", dropdown2);
         formData.append("policy", file);
 
         try {
@@ -83,10 +24,13 @@ const UploadPolicyPopup = ({ onClose }) => {
             });
 
             const result = await response.json();
-            console.log(result);
+            // console.log(result);
+            // console.log(result.status);
+            alert("Your policy is " + result.status + "!");
             onClose();
         } catch (error) {
             console.error("Error submitting form:", error);
+            alert("Service Unavailable! Please try later.")
             onClose();
         }
 
@@ -181,29 +125,6 @@ const UploadPolicyPopup = ({ onClose }) => {
 
     return (
         <div className="popup" onClick={onClose}>
-            {/* <form onClick={(e) => e.stopPropagation()} onSubmit={handleSubmit}>
-                <h2>Upload Files</h2>
-                <select
-                    value={dropdown1}
-                    onChange={(e) => setDropdown1(e.target.value)}
-                >
-                </select>
-                <select
-                    value={dropdown2}
-                    onChange={(e) => setDropdown2(e.target.value)}
-                >
-                </select>
-                <input
-                    type="file"
-                    content=""
-                    placeholder="Upload policy"
-                    name="file"
-                    id="file"
-                    className="fileUploader"
-                    onChange={(e) => setFile(e.target.files[0])}
-                />
-                <button type="submit">Submit</button>
-            </form> */}
             <div className="upload-card" onClick={(e) => e.stopPropagation()}>
                 <div className="upload-header">
                     <h1>Upload Policy</h1>
@@ -222,7 +143,7 @@ const UploadPolicyPopup = ({ onClose }) => {
                             >
                                 <option value="">Select Policy Type</option>
                                 <option value="SOC2-pt">SOC-2</option>
-                                <option value="GDPR-pt">GDPR</option>
+                                {/* <option value="GDPR-pt">GDPR</option> */}
                                 <option value="ISO27001-pt">ISO 27001</option>
                             </select>
 
@@ -237,25 +158,25 @@ const UploadPolicyPopup = ({ onClose }) => {
                                 <option value="">
                                     Select your Policy category
                                 </option>
-                                <option value="AC-pc">Access Control</option>
+                                {/* <option value="AC-pc">Access Control</option> */}
                                 <option value="AM-pc">Anti-Malware</option>
-                                <option value="Ast-pc">Asset</option>
-                                <option value="BCDR-pc">
+                                {/* <option value="Ast-pc">Asset</option> */}
+                                {/* <option value="BCDR-pc">
                                     Business Continuity and Disaster Recovery
-                                </option>
-                                <option value="BS-pc">Business Security</option>
-                                <option value="COM-pc">
+                                </option> */}
+                                {/* <option value="BS-pc">Business Security</option> */}
+                                {/* <option value="COM-pc">
                                     Communications and Operations Management
-                                </option>
+                                </option> */}
                                 <option value="IM-pc">
                                     Incident management
                                 </option>
                                 <option value="IS-pc">
                                     Information Security
                                 </option>
-                                <option value="ISMS-pc">
+                                {/* <option value="ISMS-pc">
                                     Information Security Management System
-                                </option>
+                                </option> */}
                                 <option value="PS-pc">Physical Security</option>
                                 <option value="RA-pc">Risk Assessment</option>
                             </select>

@@ -79,7 +79,6 @@
     color: #ffffff;
     font-size: 20px;
     margin-left: 5%;
-
     border-width: 0 0 0 5px;
     border-style: solid;
     border-color: transparent;
@@ -119,25 +118,41 @@
 
 .dashboard-right-pane .MainContainer{
     /* border-style: dashed; */
-    width: 100%;
-    height: 80%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
-.dashboard-right-pane .MainContainer .BarChart{
-    margin-left: 5%;
-    margin-top: 2%;
-    width: 40%;
+.dashboard-right-pane .MainContainer .LineChart{
+    /* border-style: dashed;
+    color: blueviolet; */
+    margin: 5%;
+    /* padding: 4%; */
+    width: max-content;
+}
+
+.dashboard-right-pane .MainContainer .PieChartContain{
+    /* border-style: dashed;
+    color: #ff0000; */
+    margin: 5%;
+    width: max-content;
+}
+
+
+/* .dashboard-right-pane .MainContainer .BarChart{ */
+    /* margin-left: 5%;
+    margin-top: 2%; */
+    /* width: 40%;
     height: 80%;
     border-radius: 2%;
-    place-items: center;
+    place-items: center; */
 
     /* border-style: groove;
     box-shadow: #00090E; */
     /* background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%); */
     /* background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #515e64 100%); */
-}
+/* } */
+
 .dashboard-right-pane .MainContainer .TempImg {
     /* display: block; */
     width: 400px;

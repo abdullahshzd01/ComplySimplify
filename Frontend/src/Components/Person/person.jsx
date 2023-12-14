@@ -1,7 +1,6 @@
 import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './PersonInfo.css';
+import DP from './user.png';
 
 function PersonInfo({ personData }) {
     const personClass = personData.status === 'active' ? 'person-info person-info-active' : 'person-info';
@@ -9,7 +8,7 @@ function PersonInfo({ personData }) {
     return (
         <div className={personClass}>
             <div className="person-image-pane">
-                <img className="person-image" src={personData.imageSrc} alt="DP" />
+                <img className="person-image" src={DP} alt="DP" />
             </div>
 
             <div className="person-nameInfo">

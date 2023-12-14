@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 .Settings-container {
     width: 100%;
 }
 
 .Settings-logo-img {
-
     display: block;
 
     width: 150px;
@@ -27,9 +25,12 @@
     position: absolute;
     width: 20%;
     height: 100%;
-    background: radial-gradient(113.94% 113.94% at 50.06% -13.94%, #1077A3 17.04%, #00090E 100%);
+    background: radial-gradient(
+        113.94% 113.94% at 50.06% -13.94%,
+        #1077a3 17.04%,
+        #00090e 100%
+    );
 }
-
 
 .Settings-left-pane .Navigation_Entities {
     margin: 10%;
@@ -55,7 +56,7 @@
 .Settings-left-pane .Navigation_Entities .text .h4 {
     position: relative;
     margin-left: 5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -69,7 +70,7 @@
 }
 
 .Settings-left-pane .ButtonContainer .logout-button {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     background: none;
     border: none;
     cursor: pointer;
@@ -92,11 +93,6 @@
     border-color: white;
 }
 
-
-
-
-
-
 .Settings-right-pane {
     /* border-style: dashed;
     border-color: crimson; */
@@ -114,24 +110,59 @@
     text-align: left;
 }
 
-
 .Settings-right-pane .text h1 {
     margin-left: 2%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-
 
 .Settings-right-pane .text .h2 {
     position: relative;
     margin-left: 10%;
     margin-top: 20%;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 100px;
     line-height: 35px;
     text-align: left;
     color: hsl(0, 0%, 0%);
+}
+
+.Settings-right-pane .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Settings-right-pane .cont .centered-form {
+    width: 50%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.Settings-right-pane .cont .centered-form:hover {
+    transform: scale(1.05);
+}
+
+.Settings-right-pane .cont .centered-form input,
+button {
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.Settings-right-pane .cont .centered-form button {
+    background-color: #0A4B68;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Settings-right-pane .cont .centered-form button:hover {
+    background-color: #042330;
 }
 
 @media screen and (max-width: 500px) {
