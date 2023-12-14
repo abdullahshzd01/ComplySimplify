@@ -83,7 +83,6 @@ const ChartComponent = ({ data }) => {
 export default function LineChart() {
     return (
         <div>
-            {/* <h2>Weekly Data Line Chart</h2> */}
             <ChartComponent data={weeklyData} />
         </div>
     );

@@ -33,7 +33,9 @@ const ChartComponent = ({ data }) => {
             options: {
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
+                        text: "Activity",
+                        color: "Black",
                         font: {
                             size: 20,
                             weight: "bold",
@@ -54,13 +56,16 @@ const ChartComponent = ({ data }) => {
                     if (elements && elements.length) {
                         const segment = elements[0];
                         if (!originalSizesRef.current) {
-                            originalSizesRef.current = chart.data.datasets[0].data.slice();
+                            originalSizesRef.current =
+                                chart.data.datasets[0].data.slice();
                         }
-                        const newData = originalSizesRef.current.map((size, index) => {
-                            return index === segment.index
-                                ? size * 1.2
-                                : size * 0.8;
-                        });
+                        const newData = originalSizesRef.current.map(
+                            (size, index) => {
+                                return index === segment.index
+                                    ? size * 1.2
+                                    : size * 0.8;
+                            }
+                        );
                         chart.data.datasets[0].data = newData;
                         chart.update();
                     }
@@ -80,16 +85,17 @@ const ChartComponent = ({ data }) => {
         };
     }, [data]);
 
-    return <canvas ref={chartRef}></canvas>;
+    return (
+        <div className="PieChart">
+            <canvas ref={chartRef} width="300" height="150"></canvas>
+        </div>
+    );
 };
 
 export default function PieChart() {
     return (
         <div>
-            <h2>Weekly Data Pie Chart</h2>
-            <div className="PieChart">
-                <ChartComponent data={weeklyData} />
-            </div>
+            <ChartComponent data={weeklyData} />
         </div>
     );
 }

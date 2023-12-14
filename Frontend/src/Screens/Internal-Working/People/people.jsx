@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 import Logo from "../../../assets/Logo.png";
 // import user from "../../../assets/user.png";
@@ -7,9 +7,14 @@ import NavigationEntities from "../../../Components/Navigation/Navigation_Entiti
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import Person from "../../../Components/Person/person";
-import personData from "./data.json";
+// import personData from "./data.json";
+import axios from "axios";
+import { getAuth } from "firebase/auth";
 
 function People() {
+    const auth = getAuth();
+    const [userList, setUserList] = useState([]);
+    const [currentUserId, setUserId] = useState([]);
     // const To_dashboard = useNavigate();
     // const navigateTo_dashboard = () => {
     //     To_dashboard("/dashboard");
@@ -45,6 +50,21 @@ function People() {
     //     // Handle your logout logic here
     //     To_SignUp("/SignUp");
     // };
+    useEffect(() => {
+        setUserId(auth.lastNotifiedUid);
+        const fetchData = async () => {
+            try {
+                // Assuming listUsers returns a promise
+                const response = await axios.get(`http://localhost:4069/listUsers2?userId=${currentUserId}`);
+                console.log(response.data);
+                setUserList(response.data);
+            } catch (error) {
+                console.error("Error fetching user list:", error);
+            }
+        };
+
+        fetchData(); // Invoke the fetchData function when the component mounts
+    }, [auth.lastNotifiedUid, currentUserId]); // The empty dependency array ensures it runs only once on mount
 
     return (
         <div className="dashboard-container">
@@ -63,11 +83,11 @@ function People() {
 
                 <div className="people-list-pane">
                     <div className="people-list">
-
-
-
-                        {personData.map((person, index) => (
+                        {/* {personData.map((person, index) => (
                             <Person key={index} personData={person} />
+                        ))} */}
+                        {userList.map((user) => (
+                            <Person key={user.id} personData={user} />
                         ))}
 
                         {/* <div className="person-info person-info-active">

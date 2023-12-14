@@ -72,8 +72,8 @@ const UploadPolicyPopup = ({ onClose }) => {
         // console.log(dropdown1, dropdown2, file);
 
         const formData = new FormData();
-        formData.append("policytype", dropdown1);
-        formData.append("policycategory", dropdown2);
+        formData.append("policyType", dropdown1);
+        formData.append("policyCategory", dropdown2);
         formData.append("policy", file);
 
         try {
@@ -83,10 +83,13 @@ const UploadPolicyPopup = ({ onClose }) => {
             });
 
             const result = await response.json();
-            console.log(result);
+            // console.log(result);
+            // console.log(result.status);
+            alert("Your policy is " + result.status + "!");
             onClose();
         } catch (error) {
             console.error("Error submitting form:", error);
+            alert("Service Unavailable! Please try later.")
             onClose();
         }
 
@@ -222,7 +225,7 @@ const UploadPolicyPopup = ({ onClose }) => {
                             >
                                 <option value="">Select Policy Type</option>
                                 <option value="SOC2-pt">SOC-2</option>
-                                <option value="GDPR-pt">GDPR</option>
+                                {/* <option value="GDPR-pt">GDPR</option> */}
                                 <option value="ISO27001-pt">ISO 27001</option>
                             </select>
 
@@ -237,25 +240,25 @@ const UploadPolicyPopup = ({ onClose }) => {
                                 <option value="">
                                     Select your Policy category
                                 </option>
-                                <option value="AC-pc">Access Control</option>
+                                {/* <option value="AC-pc">Access Control</option> */}
                                 <option value="AM-pc">Anti-Malware</option>
-                                <option value="Ast-pc">Asset</option>
-                                <option value="BCDR-pc">
+                                {/* <option value="Ast-pc">Asset</option> */}
+                                {/* <option value="BCDR-pc">
                                     Business Continuity and Disaster Recovery
-                                </option>
-                                <option value="BS-pc">Business Security</option>
-                                <option value="COM-pc">
+                                </option> */}
+                                {/* <option value="BS-pc">Business Security</option> */}
+                                {/* <option value="COM-pc">
                                     Communications and Operations Management
-                                </option>
+                                </option> */}
                                 <option value="IM-pc">
                                     Incident management
                                 </option>
                                 <option value="IS-pc">
                                     Information Security
                                 </option>
-                                <option value="ISMS-pc">
+                                {/* <option value="ISMS-pc">
                                     Information Security Management System
-                                </option>
+                                </option> */}
                                 <option value="PS-pc">Physical Security</option>
                                 <option value="RA-pc">Risk Assessment</option>
                             </select>
